@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 function Markdown() {
@@ -12,12 +12,15 @@ function Markdown() {
         <div id="markdown">
             <h1>Markdown</h1>
             <textarea onChange={handleChange} id="editor" value={code}>
-                
+
             </textarea>
             <h1>Preview</h1>
-            <ReactMarkdown id="preview">
-                {code}
-            </ReactMarkdown>
+            <div id="preview">
+                <ReactMarkdown>
+                    {code}
+                </ReactMarkdown>
+            </div>
+
         </div>
     )
 }
